@@ -39,7 +39,8 @@ class ContactResponse(ContactBase):
 class User(BaseModel):
     id: int
     username: str
-    email: str
+    # email: str
+    email: EmailStr = Field(..., max_length=100)
     avatar: str
 
     model_config = ConfigDict(from_attributes=True)
@@ -47,7 +48,8 @@ class User(BaseModel):
 # Схема для запиту реєстрації
 class UserCreate(BaseModel):
     username: str
-    email: str
+    # email: str
+    email: EmailStr = Field(..., max_length=100)
     password: str
 
 # Схема для токену
