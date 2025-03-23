@@ -2,6 +2,7 @@
 from pydantic import ConfigDict, EmailStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+
 class Settings(BaseSettings):
     DB_URL: str
     JWT_SECRET: str
@@ -30,12 +31,5 @@ class Settings(BaseSettings):
         case_sensitive=True
     )
 
-settings = Settings()
 
-# print("===================== ENVS =====================")
-# print(settings.MAIL_FROM)
-# print(settings.MAIL_PORT)
-# print(settings.MAIL_SERVER)
-# print(settings.MAIL_FROM_NAME)
-# print(settings.MAIL_PASSWORD)
-# print("===================== ENVS =====================")
+settings = Settings()
