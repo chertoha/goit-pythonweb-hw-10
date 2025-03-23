@@ -31,3 +31,11 @@ class Settings(BaseSettings):
     )
 
 settings = Settings()
+
+# print("===================== ENVS =====================")
+# print(settings.MAIL_FROM)
+# print(settings.MAIL_PORT)
+# print(settings.MAIL_SERVER)
+# print(settings.MAIL_FROM_NAME)
+# print(settings.MAIL_PASSWORD)
+# print("===================== ENVS =====================")
